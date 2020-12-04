@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+.col{
+  cursor: pointer;
+}
+
+/*Navbar Style Starts*/
+
+.nav-link{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.active1::after{
+    content:'';
+  background-color: black;
+  display: block;
+  height: 3px;
+  width: 6vw;
+  margin-top: 6px;
+
+}
+
+
+/*Navbar Style Ends*/
+
+
+/*Home Page Style Starts*/
+
+.head-btn{
+
+  margin-top: 5%;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #3866a1;
+  color: white;
+
+  
+}
+
+.home-container{
+  margin-top: 6%;
+}
+
+.head-img{
+  width:90%; 
+  margin-top: 8%; 
+  border-radius: 25px;
+}
+.home-contact{
+  border-right: 1px solid lightgray;
+  text-align: center;
+  margin-right: 3%;
+}
+.testimonial {
+            background: #f5f8fc;
+            text-align: center;
+            padding: 30px 30px;
+            margin: 0 15px;
+        }
+
+        .testimonial:before,
+        .testimonial:after {
+            content: "";
+            border-top: 40px solid #fff;
+            border-right: 125px solid transparent;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+        }
+
+        .testimonial:after {
+            border-right: none;
+            border-left: 125px solid transparent;
+            left: auto;
+            right: 0;
+        }
+
+        .testimonial .icon {
+            display: inline-block;
+            font-size: 40px;
+            color: #bd986b;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .testimonial-description {
+            font-size: 16px;
+            color: #777;
+            text-align: justify;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            letter-spacing: -1px;
+        }
+
+       .testimonial-content {
+            width: 100%;
+           
+        }
+
+        .testimonial-pic {
+            display: inline-block;
+            border: 6px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 2px 2px #daad86;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .testimonial-pic img {
+            width: 10vw;
+        }
+
+        .testimonial-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            text-transform: capitalize;
+            margin: 0 0 5px 0;
+        }
+
+        .testimonial-post {
+            display: block;
+            font-size: 14px;
+            color: black;
+        }
+
+        .owl-theme .owl-controls {
+            margin-top: 60px;
+        }
+
+        .owl-theme .owl-controls .owl-page span {
+            width: 32px;
+            height: 10px;
+            background: #fff;
+            border: 2px solid #bd986b;
+            margin: 5px;
+            opacity: 1;
+        }
+
+        .owl-theme .owl-controls .owl-page.active span,
+        .owl-theme .owl-controls.clickable .owl-page:hover span {
+            background: #ffd9b8;
+            border-color: #fff;
+        }
+
+        
+
+
+/* homee css ends here */
+
+
+/* shop1 css begins from here */
+
+.latest::after{
+  content:'';
+  background-color: black;
+  display: block;
+  height: 3px;
+  width: 11vw;
+  margin-top: 8px;
+}
+.scroll{
+  overflow-x: scroll;
+}
+ 
+ /* shop1 css ends from here */
+
+ /* product_details css begins from here */
+
+
+ .product-view img{
+  width:30%;
+  margin-top: 5%;
+  border-radius: 20px;
+  cursor: pointer;
+ }
+
+ .product-view{
+  justify-content: space-around;
+ }
+
+.product-details{
+   background-color: #f5f8fc; 
+   height:70vh;
+   border-radius: 30px;
+}
+
+@media only screen and (max-width:600px){
+
+  .head-img{
+    width: 100%;
+    border-radius: 25px;
+  }
+  .title{
+    font-size: 1rem;
+  }
+  .price{
+    font-size: 0.8rem;
+  }
+  .product-details{
+    height:45vh;
+  }
+  .active1::after{
+   
+  display: none;
+  }
+
+.map{
+  width: 100vw;
+}
+
+}
+

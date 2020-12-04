@@ -1,0 +1,31 @@
+{% load static %}
+{% load active_link_tags %}
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand ml-lg-4 ml-sm-2" href="/"> <img src="{% static '/images/Raju.png'%}" style="width: 100px;">
+  </a>
+  <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul id="navbarcontent" class="navbar-nav ml-auto mt-2 mr-5 mt-lg-0 text-center">
+      <li class="nav-item {% active_link 'shop1' 'active1' %}">
+        <a class="nav-link pr-5"  href="{% url 'shop1' %}">Ladies Shop</a>
+      </li>
+      <li class="nav-item {% active_link 'shop2' 'active1' %}">
+        <a class="nav-link pr-5" href="{% url 'shop2' %}">Fix Shop</a>
+      </li>
+      <li class="nav-item {% active_link 'shop3' 'active1' %}">
+        <a class="nav-link pr-5" href="{% url 'shop3' %}">Shoes Shop</a>
+      </li>
+      <li class="nav-item {% active_link 'shop4' 'active1' %}">
+        <a class="nav-link pr-5" href="{% url 'shop4' %}">Jeans Shop</a>
+      </li>
+      <li class="nav-item {% active_link 'shop5' 'active1' %}">
+        <a class="nav-link pr-5" href="{% url 'shop5' %}">Grocery Store</a>
+      </li>
+    </ul>
+  </div>
+</nav>

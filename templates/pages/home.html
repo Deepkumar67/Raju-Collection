@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+    <div class="container-fluid">
+        <div class="row mx-auto">
+            <div class="home-container col-lg-5 col-md-5 col-sm-12">
+                <h1 style="color:#A37946">Raju Collection</h1>
+                <p style="margin-top: 5%">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                    more-or-less normal distribution of letters</p>
+<!--                 <button class="head-btn btn btn mx-auto">View Products </button> -->
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <img class="head-img" src="{% static '/images/fashion.jpg' %}">
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="mt-5" style="color:#A37946">Ladies Shop</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.</p>
+                    <a href="{% url 'shop1' %}">
+                <button class="btn btn"
+                    style="padding: 8px 15px; border-radius: 15px; background-color: #3866a1;color: white;">Visit</button>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="mt-5" src="{% static '/images/Shoe.jpg' %}" style="width:100%; border-radius: " 25px">
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="mt-5" src="{% static '/images/Boutique.jpg' %}" style="width:100%; border-radius: 25px">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="mt-5" style="color:#A37946">Fix Shop</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.</p>
+                    <a href="{% url 'shop2' %}">
+                <button class="btn btn"
+                    style="padding: 8px 15px; border-radius: 15px; background-color: #3866a1;color: white;">Visit</button>
+                </a>
+            </div>
+
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="mt-5" style="color:#A37946">Shoes Shop</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.</p>
+                    <a href="{% url 'shop3' %}">
+                <button class="btn btn"
+                    style="padding: 8px 15px; border-radius: 15px; background-color: #3866a1;color: white;">Visit</button>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="mt-5" src="{% static '/images/Saree.jpg' %}" style="width:100%; border-radius: 25px">
+            </div>
+
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="mt-5" src="{% static '/images/Sunglass.jpg' %}" style="width:100%; border-radius: 25px">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="mt-5" style="color:#A37946">Jeans shop</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.</p>
+                    <a href="{% url 'shop4' %}">
+                <button class="btn btn"
+                    style="padding: 8px 15px; border-radius: 15px; background-color: #3866a1;color: white;">Visit</button>
+                    </a>    
+            </div>
+
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3 class="mt-5" style="color:#A37946">Grocery Store</h3>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.</p>
+                    <a href="{% url 'shop5' %}"
+                <button class="btn btn"
+                    style="padding: 8px 15px; border-radius: 15px; background-color: #3866a1;color: white;">Visit</button>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img class="mt-5" src="{% static '/images/Jacket.jpg' %}" style="width:100%; border-radius: 25px">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="mt-5 text-center">About Us</h2>
+        <hr />
+        <p>Hamiley chaii yesto yesto services haru provide garxam..... <br />
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+            some form, by injected humour, or randomised words which don't look even slightly believable.
+        </p>
+        <div class="row">
+
+            <div class="col-lg-2 col-md-2 sol-sm-2 mt-4 home-contact">
+
+                <h4>Shop1</h4>
+                <hr />
+                <p>Surkhet, Birendranager</p>
+                <p>+977 1234567899</p>
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 sol-sm-2 mt-4  home-contact">
+
+                <h4>Shop2</h4>
+                <hr />
+                <p>Surkhet, Birendranager</p>
+                <p>+977 1234567899</p>
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 sol-sm-2 mt-4  home-contact">
+
+                <h4>Shop3</h4>
+                <hr />
+                <p>Surkhet, Birendranager</p>
+                <p>+977 1234567899</p>
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 sol-sm-2 mt-4  home-contact">
+
+                <h4>Shop4</h4>
+                <hr />
+                <p>Surkhet, Birendranager</p>
+                <p>+977 1234567899</p>
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 sol-sm-2 mt-4  home-contact">
+
+                <h4>Shop5</h4>
+                <hr />
+                <p>Surkhet, Birendranager</p>
+                <p>+977 1234567899</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center mt-5">
+            <h2>Our Valued Clients</h2>
+            <hr />
+        </div>
+        <div class="demo">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-left"></span>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit
+                                amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at,
+                                sagittis quis neque. Praesent.Vivamus arcu metus, mattis sed sagittis at, sagittis quis
+                                neque. Praesent.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class=" testimonial-pic"><img src="{% static '/images/dummy.jpg' %}" class=""
+                                        alt=""></div>
+                                <h3 class="testimonial-title">williamson</h3>
+                                <span class="testimonial-post">Web Developer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-left"></span>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit
+                                amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at,
+                                sagittis quis neque. Praesent.Vivamus arcu metus, mattis sed sagittis at, sagittis quis
+                                neque. Praesent.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="testimonial-pic"><img src="{% static '/images/dummy.jpg' %}" alt=""></div>
+                                <h3 class="testimonial-title">Kristina</h3>
+                                <span class="testimonial-post">Web Designer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-left"></span>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit
+                                amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at,
+                                sagittis quis neque. Praesent.Vivamus arcu metus, mattis sed sagittis at, sagittis quis
+                                neque. Praesent.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="testimonial-pic"><img src="{% static '/images/dummy.jpg' %}" alt=""></div>
+                                <h3 class="testimonial-title">Steve Thomas</h3>
+                                <span class="testimonial-post">Web Developer</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-left"></span>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit
+                                amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at,
+                                sagittis quis neque. Praesent.Vivamus arcu metus, mattis sed sagittis at, sagittis quis
+                                neque. Praesent.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="testimonial-pic"><img src="{% static '/images/dummy.jpg' %}" alt=""></div>
+                                <h3 class="testimonial-title">Steve Thomas</h3>
+                                <span class="testimonial-post">Web Developer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-left"></span>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit
+                                amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at,
+                                sagittis quis neque. Praesent.Vivamus arcu metus, mattis sed sagittis at, sagittis quis
+                                neque. Praesent.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="testimonial-pic"><img src="{% static '/images/dummy.jpg' %}" alt=""></div>
+                                <h3 class="testimonial-title">Steve Thomas</h3>
+                                <span class="testimonial-post">Web Developer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <span class="icon fa fa-quote-left"></span>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit
+                                amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at,
+                                sagittis quis neque. Praesent.Vivamus arcu metus, mattis sed sagittis at, sagittis quis
+                                neque. Praesent.
+                            </p>
+                            <div class="testimonial-content">
+                                <div class="testimonial-pic"><img src="{% static '/images/dummy.jpg' %}" alt=""></div>
+                                <h3 class="testimonial-title">Steve Thomas</h3>
+                                <span class="testimonial-post">Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+{% endblock %}

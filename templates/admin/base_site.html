@@ -1,0 +1,15 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block title %} Raju Collection | Admin Panel {% endblock %}
+{% block branding %}
+    <h1 id="head">
+        <img src="{% static 'images/logo-admin.png' %}" alt="Admin Logo" class="navbar-brand" width="120px">
+        Raju Collection Admin Panel
+    </h1>
+
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/admins.css' %">
+
+{% endblock %}

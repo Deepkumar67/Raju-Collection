@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+
+        <section class="search mt-2 mb-4">
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form method="GET" action="{% url 'search4' %}">
+                        <div class="form-row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0">
+                                <input type="text" name="q" class="form-control form-control-lg"
+                                       placeholder="Search for any products or any brand">
+                            </div>
+                            <div class="col-lg-2 col-3 col-md-3">
+                                <button type="submit" class="btn btn-info searchbtn" style="font-size: 1.2rem">Search</button>
+                            </div>
+                       </div>
+                </div>
+            </form>
+    </section>
+    {% if search_query %}
+
+       <h5 class="page-title mx-auto text-center mt-2">Search results for <i class="text-info">{{ request.GET.q }}</i></h5>
+
+        <div class="row">
+
+        {% for q in search_query %}
+
+
+                                <div class="col-lg-3 col-md-4 col-sm-5 mt-4">
+                            
+                                     <a href="{% url 'productDetail' q.id %}">
+                                    <img src="{{ q.main_image.url }}" alt="ls1" width="200px" height="250px">
+                                      </a>
+                            
+                                    <h6 class=" text-center title mt-3">{{ q.title }}</h6>
+                                    {% if q.price %}
+                                    <h6 class=" text-center price mt-2">Rs. {{ q.price }}</h6>
+                                    {% else %}
+                                    <h6 class=" text-center price mt-2"></h6>
+                                    {% endif %}
+                                </div>
+                          
+
+            {% endfor %}
+
+           </div>
+       </div>
+
+    {% else %}
+
+        <h4>No results! Search for other Products</h4>
+
+    {% endif %}
+
+</section>
+
+    {% if search_query.has_other_pages %}
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        {% if search_query.has_previous  %}
+        <li class="page-item disabled">
+          <a class="page-link" href="?page={{search_query.previous_page_number}}" tabindex="-1">&laquo;</a>
+        </li>
+        {% else %}
+         <li class="page-item disabled">
+            <a class="page-link">&laquo;</a>
+         </li>
+        {% endif %}
+
+        {% for i in search_query.paginator.page_range %}
+            {% if search_query.number == i %}
+                <li class="page-item active">
+                    <a class="page-link">{{i}}</a>
+                </li>
+            {% else %}
+                <li class="page-item">
+                   <a href="?page={{i}}" class="page-link">{{i}}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if search_query.has_next  %}
+            <li class="page-item">
+                <a href="?page={{search_query.next_page_number}}" class="page-link">&raquo;</a>
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+            <a class="page-link">&raquo;</a>
+            </li>
+        {% endif %}
+
+
+      </ul>
+    </nav>
+    {% endif %}
+
+{% endblock %}
+
+
+
+
+
+                           
+ 

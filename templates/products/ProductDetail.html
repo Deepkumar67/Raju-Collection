@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="mb-5">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-5 col-sm-12 mt-5">
+				<img class="product-img" src="{{ product.main_image.url }}" width="300px" height="350px">
+				<div class="product-view d-flex">
+
+					<img src="{{product.main_image.url}}" onclick="imgSlider('{{product.main_image.url}}')">
+
+					{% if product.image1 %}
+					<img src="{{product.image1.url}}" onclick="imgSlider('{{product.image1.url}}')">
+					{% endif %}
+
+					{% if product.image2 %}
+					<img src="{{ product.image2.url }}" onclick="imgSlider('{{ product.image2.url }}')">
+					{% endif %}
+				</div>
+
+			</div>
+
+			<div class="col-lg-7 col-md-7 col-sm-12 mt-5 ">
+				<div class="pl-4 product-details">
+					<h3 class="product-title mt-3">{{ product.title }}</h3>
+					<h6 class="mt-3">Shop Name: {{ product.shop }}</h6>
+                      {% if product.price %}
+                       <h6 class="price mt-3">Rs. {{ product.price }}</h6>
+                       {% else %}
+                       <h6 class="price mt-3"></h6>
+                       {% endif %}
+					{% if product.out_of_stock %}
+					<h6 class="mt-4" style="font-size: 0.7rem;color: red;">Avaibility: Out of Stock</h6>
+					{% else %}
+					<h6 class="mt-4" style="font-size: 0.7rem;color: green;">Avaibility: In Stock</h6>
+					{% endif %}
+					<h6 class="mt-4" style="font-size: 0.9rem; font-weight: bold">Brand: <span
+							style="font-weight: lighter;"> {{product.brand}} </span></h6>
+					<h6 class="mt-4" style="font-size: 0.9rem; font-weight: bold">Size: <span
+							style="font-weight: lighter;"> {{ product.size }} </span> </h6>
+					<h6 class="mt-4" style="font-size: 0.9rem; font-weight: bold">Color: <span
+							style="font-weight: lighter;"> {{ product.color }} </span> </h6>
+					<a href="{% url 'home' %}"><button class="product-btn btn btn-primary mt-3">Go Back</button></a>
+				</div>
+				<div class="product-description mt-4">
+					<h5 class="text-center">Description</h5>
+					<p class="pl-4">{{ product.description }}</p>
+				</div>
+			</div>
+
+						<section>
+
+                		{% if recommended %}
+                		    <div>
+			               <h5 class="mt-5">Recommended Products</h5>
+			               </div>
+
+			            <div class="row mx-auto d-flex" style="margin-top: 5%">
+			            	{% for product in recommended %}
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-6 mt-4 text-center">
+                    <a href="{% url 'productDetail' product.id %}">            
+                    <img src="{{ product.main_image.url }}" alt="ls1" width="150px" height="200px">
+                    </a>
+                        <h6 class="text-center title mt-3">{{ product.title }}</h6>
+                        {% if product.price %}
+                        <h6 class="text-center price mt-2">Rs. {{ product.price }}</h6>
+                        {% else %}
+                         <h6 class="text-center price mt-2"></h6>
+                         {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </section>
+
+		</div>
+
+</main>
+
+
+{% endblock %}
