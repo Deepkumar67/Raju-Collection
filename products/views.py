@@ -103,7 +103,7 @@ def SearchResults1(request):
 
     search_items = request.GET.get('q')
     query_set = Product.objects.filter(shop__id__contains = 1, out_of_stock = False)
-    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items) 
+    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items)
     paginator = Paginator(query_filter,12)
     page = request.GET.get('page')
     final_query = paginator.get_page(page)
@@ -114,13 +114,13 @@ def SearchResults1(request):
 
 
 
-    return render(request, 'pages/SearchResults.html',context)
+    return render(request, 'pages/searchResults.html',context)
 
 def SearchResults2(request):
 
     search_items = request.GET.get('q')
     query_set = Product.objects.filter(shop__id__contains = 2, out_of_stock = False)
-    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items) 
+    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items)
     paginator = Paginator(query_filter,12)
     page = request.GET.get('page')
     final_query = paginator.get_page(page)
@@ -131,14 +131,14 @@ def SearchResults2(request):
 
 
 
-    return render(request, 'pages/SearchResults2.html',context)
+    return render(request, 'pages/searchResults2.html',context)
 
 
 def SearchResults3(request):
 
     search_items = request.GET.get('q')
     query_set = Product.objects.filter(shop__id__contains = 3, out_of_stock = False)
-    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items) 
+    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items)
     paginator = Paginator(query_filter,12)
     page = request.GET.get('page')
     final_query = paginator.get_page(page)
@@ -149,14 +149,14 @@ def SearchResults3(request):
 
 
 
-    return render(request, 'pages/SearchResults3.html',context)
+    return render(request, 'pages/searchResults3.html',context)
 
 
 def SearchResults4(request):
 
     search_items = request.GET.get('q').lower()
     query_set = Product.objects.filter(shop__id__contains = 4, out_of_stock = False)
-    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items) 
+    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items)
     paginator = Paginator(query_filter,12)
     page = request.GET.get('page')
     final_query = paginator.get_page(page)
@@ -167,7 +167,7 @@ def SearchResults4(request):
 
 
 
-    return render(request, 'pages/SearchResults4.html',context)
+    return render(request, 'pages/searchResults4.html',context)
 
 
 
@@ -175,7 +175,7 @@ def SearchResults5(request):
 
     search_items = request.GET.get('q').lower()
     query_set = Product.objects.filter(shop__id__contains = 5, out_of_stock = False)
-    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items) 
+    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items)
     paginator = Paginator(query_filter,12)
     page = request.GET.get('page')
     final_query = paginator.get_page(page)
@@ -186,4 +186,4 @@ def SearchResults5(request):
 
 
 
-    return render(request, 'pages/SearchResults5.html',context)
+    return render(request, 'pages/searchResults5.html',context)
