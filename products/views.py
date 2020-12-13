@@ -1,7 +1,8 @@
-from django.shortcuts import get_object_or_404, render
-from .models import Product,Advertisement
+from django.shortcuts import get_object_or_404, render, redirect
+from .models import Product,Advertisement,Contact
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 import random
+from .forms import ContactForm
 
 def shop1(request):
     products_one = Product.objects.filter(shop__id__contains = 1, is_new_arrival=True and False)
@@ -31,22 +32,6 @@ def productDetail(request,product_id):
 
     return render(request, 'products/productDetail.html',context)
 
-
-
-def shop2(request):
-    products_two = Product.objects.filter(shop__id__contains = 2, is_new_arrival = True and False)
-    latest = Product.objects.filter(is_new_arrival = True, shop__id__contains = 2)
-    advertisement = Advertisement.objects.filter(shop__id__contains =2).order_by('id')
-    paginator = Paginator(products_two,12)
-    page = request.GET.get('page')
-    paged_products = paginator.get_page(page)
-    context ={
-        'products_two': paged_products,
-        'latest_two' : latest,
-        'advertisement': advertisement
-    }
-
-    return render(request, 'products/shop2.html',context)
 
 
 def shop3(request):
@@ -116,22 +101,6 @@ def SearchResults1(request):
 
     return render(request, 'pages/searchResults.html',context)
 
-def SearchResults2(request):
-
-    search_items = request.GET.get('q')
-    query_set = Product.objects.filter(shop__id__contains = 2, out_of_stock = False)
-    query_filter = query_set.filter(description__icontains = search_items) | query_set.filter(title__icontains = search_items)
-    paginator = Paginator(query_filter,12)
-    page = request.GET.get('page')
-    final_query = paginator.get_page(page)
-
-    context = {
-        'search_query' : final_query
-    }
-
-
-
-    return render(request, 'pages/searchResults2.html',context)
 
 
 def SearchResults3(request):
@@ -187,3 +156,16 @@ def SearchResults5(request):
 
 
     return render(request, 'pages/searchResults5.html',context)
+
+
+def contact(request):
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('/')
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'pages/contact.html',context)
