@@ -60,7 +60,7 @@ def shop4(request):
     context = {
         'products_four': paged_products,
         'latest_four' : latest,
-        'Advertisement' : advertisement
+        'advertisement' : advertisement
     }
 
     return render(request, 'products/shop4.html',context)
@@ -169,3 +169,13 @@ def contact(request):
     }
 
     return render(request, 'pages/contact.html',context)
+
+def Disclaimer(request):
+    return render(request, 'partials/disclaimer.html')
+
+def TermsAndConditions(request):
+    return render(request, 'partials/terms-and-conditions.html')
+
+
+def PrivacyPolicy(request):
+    return render(request, 'partials/privacy-policy.html')

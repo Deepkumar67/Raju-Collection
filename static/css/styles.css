@@ -67,15 +67,23 @@ a:hover{
 }
 
 .head-img{
-  width:90%; 
+  width:100%; 
   margin-top: 8%; 
-  border-radius: 25px;
+  border-radius: 15px;
 }
 .home-contact{
-  border-right: 1px solid lightgray;
   text-align: center;
-  margin-right: 3%;
 }
+.boss-contact{
+  text-align: center;
+  border-right: 3px solid black;
+}
+.boss-contact2{
+  text-align: center;
+}
+
+
+
 .testimonial {
             background: #f5f8fc;
             text-align: center;
@@ -194,7 +202,8 @@ a:hover{
 
 
  .product-view img{
-  width:30%;
+   height: 180px;
+   width: 150px;
   margin-top: 5%;
   border-radius: 20px;
   cursor: pointer;
@@ -209,6 +218,22 @@ a:hover{
    height:70vh;
    border-radius: 30px;
 }
+.contactHead{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+
+}
+.contactShopDetails{
+     margin-top: 15%;
+
+
+}
+.contactBtn{
+  background-color: #A37946;
+  color: white;
+}
+
+
 
 @media only screen and (max-width:600px){
 
@@ -231,8 +256,23 @@ a:hover{
   }
 
 .map{
-  width: 100vw;
+  width: 95vw;
 }
 
 }
 
+
+/*Advertisement*/
+.slider{
+  height: 50%;
+  width: 100%;
+}
+
+/*ends*/
+
+.MD{
+  margin-top: 10%;
+}
+.card{
+  width: 100%;
+}

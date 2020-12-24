@@ -6,37 +6,53 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-sm-12 mt-4">
 				<img style="margin-left: 20%" src="{% static '/images/Raju.png' %}" width="50%">
-				<p class="text-center">Raju Collection is a bussiness website. Where you can see the varities of clothes
+				<p class="text-center">Raju collection is a one-stop destination for your family's needs.
 				</p>
+				<img src="{% static '/images/k.png' %}" width="15%"><p class="text-center"><span><strong> 100% Original</strong> guarantee for all products at <a style="text-decoration: none; color: black" href="/">RajuCollection.</a></span></p>
 			</div>
 			<div class="col-lg-2 col-md-3 col-sm-12 mt-5 text-center footer-support">
-				<h5>Support</h5>
-				<a class="d-block" href="/" style="color: black">Privacy and Policy </a>
-				<a class="d-block" href="/" style="color: black">Disclaimer</a>
-				<a class="d-block" href="/" style="color: black">Terms and Conditions </a>
+				<h5>Support</h5><br/>
+				<a class="d-block" href="{% url 'privacypolicy' %}" style="color: black">Privacy and Policy </a>
+				<a class="d-block" href="{% url 'disclaimer' %}"style="color: black">Disclaimer</a>
+				<a class="d-block" href="{% url 'termsandconditions' %}" style="color: black">Terms and Conditions </a><br/>
+				<img class="card" src="{% static '/images/card.jpg' %}">
+				
+
 			</div>
 			<div class="col-md-4 col-lg-3 col-sm-12 mt-5 text-center">
-				<a class="px-2" target="_blank" href="https://www.facebook.com/metamium"><i
+				<h5>Follow us on</h5>
+			        <a class="px-2" target="_blank" href="/"><i
+						class="fa fa-youtube-play fa-2x" aria-hidden="true" style=" color:#ff0000"></i>
+					    </a>
+					<a class="px-2" target="_blank" href="https://www.facebook.com/rajucollectionNP/"><i
 						class="fa fa-facebook-official fa-2x" aria-hidden="true" style=" color:#3b5998"></i></a>
-				<a class="px-2" target="_blank" href="https://twitter.com/metamium"><i class="fa fa-twitter fa-2x"
-						style="color:#00acee" aria-hidden="true"></i></a>
-				<a class="px-2" target="_blank" href="mailto:Metamium@gmail.com"><i class="fa fa-envelope fa-2x"
-						aria-hidden="true" style="color:#D44638" }}></i></a>
-				<a class="px-2" target="_blank" href="https://www.linkedin.com/company/metamium-group/mycompany"><i
-						class="fa fa-linkedin fa-2x" aria-hidden="true" style="color:#00acee"></i></a>
+
+				    <a class="px-2" target="_blank" href="/"><i
+						class="fa fa-instagram fa-2x" aria-hidden="true" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);  color:#fff;box-shadow: 0px 3px 10px rgba(0,0,0,.25); border-radius: 5px"></i></a>
+				
+					<a class="px-2" target="_blank" href="mailto:rajucollectionsurkhet@gmail.com"><i
+						class="fa fa-envelope fa-2x" aria-hidden="true" style=" color:#EA4335"></i>
+					   </a>
+						
+				
 				<div class="copyright pt-4">
 					<i class="fa fa-copyright fa-sm footerline1" aria-hidden="true" style="color:black"> copyright
 						2020</i><span className="footerline1"><a href="/" style="color:black; textDecoration:none"> Raju
 							Collection </a> </span>
 					<br />
 					<i>Developed by <a target="_blank" href="https://metamium.com/"><span>Metamium Group</span></a>
+						<p class="mt-3"><Strong>Note:</Strong>Return within 5 days.</p>
+
+						
 				</div>
 
 			</div>
+
                  <div class="maps col-lg-4 col-md-3 col-sm-10 col-12 mt-4 d-flex">
 					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.124838201632!2d81.61289804964254!3d28.59603148234596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a2850b053f79cb%3A0xaf3da9dcc73c53a2!2sRaju%20Collection!5e0!3m2!1sen!2snp!4v1606972732746!5m2!1sen!2snp" width="300" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
 		</div>
+
 	</div>
 
 

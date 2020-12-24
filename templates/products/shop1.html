@@ -12,16 +12,16 @@
             {% for advertisement_product in advertisement %}
                    
                     <div class="carousel-item active">
-                      <img src="{{ advertisement_product.adv_image1.url }}" alt="adv1" width="100%" height="50%">
+                      <img class="slider" src="{{ advertisement_product.adv_image1.url }}" alt="adv1">
                     </div>
                 {% if advertisement_product.adv_image2 %}
                     <div class="carousel-item">
-                      <img src= "{{ advertisement_product.adv_image2.url }}" alt="s1" width="100%" height="50%">
+                      <img class="slider" src= "{{ advertisement_product.adv_image2.url }}" alt="s1">
                     </div>
                 {% endif %}
                 {% if advertisement_product.adv_image3 %}
                     <div class="carousel-item">
-                      <img src="{{ advertisement_product.adv_image3.url }}" alt="adv3" width="100%" height="50%">
+                      <img class="slider" src="{{ advertisement_product.adv_image3.url }}" alt="adv3">
                     </div>
                 {% endif %}
             {% endfor %}
